@@ -41,6 +41,10 @@ public class Employee {
 
         Employee other = (Employee) otherObject;
         return Objects.equals(name,other.name) && salary == other.salary && Objects.equals(hireDay,other.hireDay);
+        //为了防止name,hireDay可能为null的情况，需要使用Objects.equals方法。
+        //如果两个参数都为null, Objects.equals(a,b)返回true.
+        //如果其中一个参数为null, 则返回false.
+        //如果两个参数都不为null, 则调用 a.equals(b).
     }
 
     public int hashCode(){
