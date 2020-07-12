@@ -49,6 +49,9 @@ public class Employee {
 
     public int hashCode(){
         return Objects.hash(name, salary, hireDay);
+        //建议使用null安全的 Objects.hashCode 方法，如果参数为null，方法返回 0 ，否则返回对参数调用hashCode的结果。
+        //更好的做法：需要组合多个散列值时，可以调用 Objects.hash 并提供多个参数。
+        //这个方法会对各个参数调用 Objects.hashCode,并组合这些散列值。
     }
 
     public String toString(){
