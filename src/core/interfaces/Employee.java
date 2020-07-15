@@ -32,6 +32,12 @@ public class Employee implements Comparable<Employee>{
      */
     public int compareTo(Employee other){
         return Double.compare(salary, other.salary);
+        /*
+                static int compare(double x, double y)
+                如果 x < y,返回一个负数;
+                x 等于 y , 返回 0 ;
+                x > y , 返回一个正数。
+         */
     }
 }
 
