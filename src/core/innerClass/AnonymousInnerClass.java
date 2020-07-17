@@ -1,5 +1,5 @@
 package core.innerClass;
-
+//匿名内部类实现语音时钟
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,10 +17,18 @@ public class AnonymousInnerClass {
     }
 }
 
+
+/**
+ * A clock that prints the time in regular intervals.
+ */
 class TalkingClockAnonymous{
+    /**
+     * Starts the clock
+     * @param interval the intervals between messages (in milliseconds)
+     * @param beep true if the clock should beep
+     */
     public void start(int interval, boolean beep){
         ActionListener listener = new ActionListener() {
-
             public void actionPerformed(ActionEvent e) {
                 System.out.println("At the tone, the time is " + new Date());
                 if(beep) Toolkit.getDefaultToolkit().beep();
