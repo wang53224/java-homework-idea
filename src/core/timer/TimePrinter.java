@@ -13,3 +13,6 @@ class TimePrinter implements ActionListener {
         Toolkit.getDefaultToolkit().beep();
     }
 }
+
+//static Toolkit getDefaultToolkit()    获得默认的工具箱，工具箱包含有关GUI环境的信息
+//void beep()       发出一声铃响
