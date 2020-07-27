@@ -1,6 +1,5 @@
 package core.bigInterger;
 //采用大数值运算中奖概率
-
 import java.math.BigInteger;
 import java.util.Scanner;
 

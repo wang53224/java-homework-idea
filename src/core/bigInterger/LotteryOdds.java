@@ -1,5 +1,5 @@
 package core.bigInterger;
-
+//采用循环运算中奖概率
 import java.util.Scanner;
 
 public class LotteryOdds {
