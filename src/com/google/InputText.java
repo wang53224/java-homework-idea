@@ -19,9 +19,11 @@ public class InputText {
         System.out.println("Hello," + name + ".Next year,you'll be " + (age + 1));
 
         // 读取密码 NullPointerException
-        Console console = System.console();
-        String username = console.readLine("User name: ");
-        char[]  password = console.readPassword("Password: ");
+        try {
+            Console console = System.console();
+            String username = console.readLine("User name: ");
+            char[]  password = console.readPassword("Password: ");
+        }catch (Exception e){}
 
     }
 }
