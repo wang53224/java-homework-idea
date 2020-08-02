@@ -15,10 +15,17 @@ public class StackTraceTest {
     public static int factorial(int n) {
         System.out.println("factorial(" + n + "):");
         Throwable t = new Throwable();
+
+        // 获得构造这个对象时调用堆栈的跟踪
         StackTraceElement[] frames = t.getStackTrace();
         for (StackTraceElement f : frames) {
             System.out.println(f);
         }
+        /*  也可以用如下方法
+            StringWriter out = new StringWriter();
+            t.printStackTrace(new PrintWriter(out));
+            String description = out.toString();
+        */
         int r;
         if (n <= 1) {
             r = 1;
